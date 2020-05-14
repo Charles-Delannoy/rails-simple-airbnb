@@ -1,6 +1,35 @@
-<div class="container">
-  <div class="flat-detail-box">
-    <h1><%= @flat.name %></h1>
-    <p><%= @flat.address %></p>
+
+<%= image_tag @flat.picture_url, class: "picture-show"%>
+<div class="container show-container">
+  <div class="d-flex justify-content-between">
+    <div class="flat-detail-box detail-title detail-right">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+    </div>
+
+    <div class="left-details">
+      <div class="flat-detail-box left-section">
+        <h2>Details</h2>
+        <div class="d-flex">
+          <div class="card-info">
+            <i class="fas fa-user-friends"></i>
+            <span><%= @flat.number_of_guests %></span>
+          </div>
+          <div class="card-info">
+            <i class="fas fa-euro-sign"></i>
+            <%= @flat.price_per_night %>
+          </div>
+        </div>
+      </div>
+      <div class="flat-detail-box left-section d-flex align-items-center justify-content-between">
+        <p>Share</p>
+        <div class="social-media">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-pinterest-square"></i>
+          <i class="fas fa-envelope-square"></i>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -16,12 +16,16 @@
     <div class="navbar navbar-expand-lg navbar-light bg-light">
       <%= link_to "AirBnb Light", flats_path, class: "navbar-brand" %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="ml-auto flex">
+        <div class="ml-auto d-flex">
+        <form class="form-inline my-2 my-lg-0">
+          <input name="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
           <%= link_to "Add Flat", new_flat_path, class: "btn btn-outline-primary my-2 my-sm-0 ml-2" %>
         </div>
       </div>
     </div>
-    <div class="page-layout">
+    <div class="page-layout d-flex justify-content-around">
       <%= yield %>
     </div>
   </body>

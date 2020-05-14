@@ -7,6 +7,7 @@
   <div class="col-4">
 
     <div class="flat-card">
+      <%= image_tag flat.picture_url, class: "picture-card"%>
       <div class="flat-card-content">
         <div class="flat-card-title">
           <h4><%= flat.name %></h4>
@@ -25,8 +26,10 @@
       </div>
       <div class="flat-card-action">
         <%= link_to "More info", flat_path(flat), class: "action-btn"%>
-        <%= link_to "Edit", flat_path(flat), class: "action-btn yellow-text"%>
-        <%= link_to "Delete", flat_path(flat), class: "action-btn red-text"%>
+        <%= link_to "Edit", edit_flat_path(flat), class: "action-btn yellow-text"%>
+        <%= link_to "Delete", flat_path(flat),
+            method: :delete,
+            data: { confirm: "Are you sure?" }, class: "action-btn red-text" %>
       </div>
     </div>
 
