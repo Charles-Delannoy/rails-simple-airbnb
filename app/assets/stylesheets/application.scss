@@ -29,8 +29,10 @@ body {
   top: 200px;
 }
 
-.navbar a {
-  border-radius: 5px;
+.navbar {
+  a, button, input {
+    border-radius: 5px;
+  }
 }
 
 .flat-card {
